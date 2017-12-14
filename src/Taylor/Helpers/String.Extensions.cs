@@ -11,7 +11,7 @@ namespace Taylor.Helpers
         /// </summary>
         public static bool IsNullOrEmpty(this string str)
         {
-            return string.IsNullOrEmpty(str);
+            return string.IsNullOrEmpty(str) || str.Trim().Length == 0;
         }
 
         /// <summary>
@@ -21,7 +21,7 @@ namespace Taylor.Helpers
         /// <returns></returns>
         public static bool IsNotNullOrEmpty(this string str)
         {
-            return !string.IsNullOrEmpty(str);
+            return !str.IsNullOrEmpty();
         }
 
         /// <summary>
