@@ -197,9 +197,9 @@ namespace Taylor.Helpers
         /// </summary>
         /// <param name="input">输入值</param>
         /// <returns></returns>
-        public static decimal ToBool(object input)
+        public static bool ToBool(object input)
         {
-            return ToDecimalOrNull(input) ?? 0;
+            return ToBoolOrNull(input) ?? false;
         }
 
         /// <summary>
@@ -222,6 +222,8 @@ namespace Taylor.Helpers
         {
             switch (input.SafeString().ToLower())
             {
+                case "false":
+                    return false;
                 case "0":
                     return false;
                 case "否":
@@ -232,6 +234,8 @@ namespace Taylor.Helpers
                     return false;
                 case "fail":
                     return false;
+                case "true":
+                    return true;
                 case "1":
                     return true;
                 case "是":

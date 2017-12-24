@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Taylor.Datas
+namespace Taylor.Mongo
 {
     public class Class1
     {
